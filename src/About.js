@@ -33,9 +33,9 @@ const About = () => {
           >
             {/* Each paragraph animated separately */}
             {[
-              "Hello! I'm Varsha Gubbala, a dedicated web developer with a passion for creating responsive, user-friendly, and performant web applications. My journey into web development began with a fascination for how digital experiences are crafted, leading me to dive deep into front-end and back-end technologies.",
+              "Hi! I'm Varsha Gubbala, a passionate Computer Science student who loves building practical and user-friendly digital experiences. I’m always excited to work on meaningful projects that make a difference.",
               "I specialize in building dynamic interfaces with React.js and have experience with modern JavaScript (ES6+), HTML5, and CSS3. I'm also proficient in using frameworks like Tailwind CSS for rapid UI development and have a foundational understanding of server-side technologies like Node.js and databases like MongoDB.",
-              "I thrive on solving complex problems and continuously learning new technologies to improve my craft. When I'm not coding, you can find me exploring new hiking trails, reading sci-fi novels, or experimenting with new recipes.",
+              "I'm always eager to learn — whether it’s through coding, online courses, or collaborating with others. Outside the tech world, I love expressing my creativity through drawing and sketching.",
             ].map((text, i) => (
               <motion.p
                 key={i}
