@@ -1,0 +1,60 @@
+/* src/Hero.css */
+
+/* Keyframes for typing cursor blink */
+@keyframes hero-blink-cursor {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Apply blink animation to cursor */
+.hero-blink-cursor {
+  animation: hero-blink-cursor 0.7s step-end infinite;
+}
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes hero-fade-slide-up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base styles for elements that will fade-in/slide-up */
+.hero-fade-slide-up {
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+/* Apply animation when active */
+.hero-fade-slide-up-active {
+  animation: hero-fade-slide-up-animation 0.8s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay for buttons after description */
+.hero-delay-buttons {
+  animation-delay: 0.2s; /* Adjust this delay as needed */
+}
+
+/* Keyframes for pulse-bounce animation for scroll indicator */
+@keyframes hero-pulse-bounce-animation {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1); /* Bounce up and slightly enlarge */
+    opacity: 0.7;
+  }
+}
+
+/* Apply pulse-bounce animation to scroll indicator */
+.hero-pulse-bounce {
+  animation: hero-pulse-bounce-animation 2s infinite ease-in-out;
+}

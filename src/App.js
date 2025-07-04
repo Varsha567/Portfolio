@@ -7,6 +7,7 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import GlowingCursorTrail from './GlowingCursorTrail';
 
 // Main App Component
 const App = () => {
@@ -64,6 +65,7 @@ const App = () => {
     <div className="font-inter bg-gray-950 text-gray-50 min-h-screen relative overflow-hidden">
       {/* Particles Background Component - Positioned absolutely to cover the entire background */}
       {/* z-[-1] ensures it stays behind all other content */}
+      <GlowingCursorTrail />
       <ParticlesBackground />
 
       {/* Main content wrapper, positioned above the particles background with a higher z-index */}

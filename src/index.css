@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased; /* Smoother font rendering for Webkit browsers */
   -moz-osx-font-smoothing: grayscale; /* Smoother font rendering for Firefox */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  cursor: none;
 }
 
 /* Optional: Custom keyframes for animations */

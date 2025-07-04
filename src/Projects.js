@@ -1,6 +1,6 @@
-// Projects.js
 import React from 'react';
-import { FolderGit } from 'lucide-react'; // Icon from lucide-react
+import { FolderGit } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
@@ -8,38 +8,68 @@ const Projects = () => {
       title: 'SkillSwap Platform',
       description: 'Developed and deployed a full-stack MERN (MongoDB, Express.js, React, Node.js) web application for skill exchange.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Google Generative Language API (Gemini)'],
-      liveDemoUrl: 'https://skillswap-platform.netlify.app/', // Replace with actual URL
-      githubUrl: 'https://github.com/Varsha567/SkillSwap' // Replace with actual URL
+      liveDemoUrl: 'https://skillswap-platform.netlify.app/',
+      githubUrl: 'https://github.com/Varsha567/SkillSwap'
     },
     {
-      title: 'Task Management App',
-      description: 'A responsive web application for managing daily tasks with drag-and-drop features, categorization, and due date reminders.',
-      technologies: ['React', 'Firebase', 'Tailwind CSS'],
-      image: 'https://placehold.co/600x400/2A2E3C/B0C4DE?text=Task+Manager',
-      liveDemoUrl: 'https://example.com/task-manager-demo', // Replace with actual URL
-      githubUrl: 'https://github.com/yourusername/task-manager-repo' // Replace with actual URL
+      title: 'HireZee',
+      description: 'A platform connecting recruiters with job applicants. Featured resume screening and job application functionalities.',
+      technologies: ['Streamlit', 'MySQL', 'Python'],
+      liveDemoUrl: 'https://github.com/Varsha567/HireZee',
+      githubUrl: 'https://github.com/Varsha567/HireZee'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A dynamic weather dashboard that fetches real-time weather data using a public API, displaying current conditions and forecasts.',
-      technologies: ['JavaScript', 'HTML', 'CSS', 'OpenWeather API'],
-      image: 'https://placehold.co/600x400/2A2E3C/B0C4DE?text=Weather+App',
-      liveDemoUrl: 'https://example.com/weather-demo', // Replace with actual URL
-      githubUrl: 'https://github.com/yourusername/weather-repo' // Replace with actual URL
+      title: 'CBIT Event Registration',
+      description: 'A responsive web application for event registration at CBIT. Designed an intuitive UI with Bootstrap for seamless user experience.',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
+      image: 'https://placehold.co/600x400/2A2E3C/B0C4DE?text=Event+App',
+      liveDemoUrl: 'https://benevolent-pasca-90b5a6.netlify.app/',
+      githubUrl: 'https://github.com/Varsha567/CBIT-Event-Registration'
     }
   ];
 
   return (
     <section id="projects" className="py-20 px-4">
-      <div className="bg-gray-800 bg-opacity-60 p-8 rounded-2xl shadow-xl backdrop-blur-md border border-gray-700 max-w-6xl mx-auto">
-        <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-8 text-center flex items-center justify-center">
+      <motion.div
+        className="bg-gray-800 bg-opacity-60 p-8 rounded-2xl shadow-xl backdrop-blur-md border border-gray-700 max-w-6xl mx-auto"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        {/* Heading with animation */}
+        <motion.h3
+          className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-8 text-center flex items-center justify-center"
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           My Projects <FolderGit className="inline-block ml-3" size={32} />
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.h3>
+
+        {/* Projects Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+        >
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-900 p-6 rounded-xl shadow-md border border-gray-700 transform hover:scale-105 transition-transform duration-300 flex flex-col justify-between">
+            <motion.div
+              key={index}
+              className="bg-gray-900 p-6 rounded-xl shadow-md border border-gray-700 transform hover:scale-105 transition-transform duration-300 flex flex-col justify-between"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
               <div>
-                
                 <h4 className="text-2xl font-semibold text-blue-300 mb-2">{project.title}</h4>
                 <p className="text-gray-300 mb-4 text-base">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -68,10 +98,10 @@ const Projects = () => {
                   GitHub
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

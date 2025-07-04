@@ -1,0 +1,24 @@
+/* src/components/GlowingCursorTrail.css */
+
+.trail-dot {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: #00eaff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow:
+    0 0 10px #00eaff,
+    0 0 20px #00eaff,
+    0 0 30px #00ffff;
+  mix-blend-mode: screen;
+  transition: transform 0.1s ease-out;
+}
+
+.fade-0  { opacity: 1; }
+.fade-1  { opacity: 0.8; }
+.fade-2  { opacity: 0.6; }
+.fade-3  { opacity: 0.4; }
+.fade-4  { opacity: 0.25; }
+.fade-5  { opacity: 0.15; }
