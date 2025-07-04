@@ -1,13 +1,42 @@
+/* index.css */
+
+/* Tailwind CSS directives - MUST be at the very top */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Global body styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* Using 'Inter' font, fallback to system fonts */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering for Webkit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smoother font rendering for Firefox */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Optional: Custom keyframes for animations */
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* Apply custom animation classes */
+.animate-fade-in-up {
+  animation: fadeInFromBottom 0.8s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+/* Delay animations for sequential appearance */
+.animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+.animate-fade-in-up.delay-600 { animation-delay: 0.6s; }
