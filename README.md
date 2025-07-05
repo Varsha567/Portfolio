@@ -1,6 +1,3 @@
-
-### ✅ `README.md` for your portfolio
-
 # 💻 Mani Varsha Gubbala – Portfolio Website
 
 Welcome to my personal portfolio website! This project showcases my skills, projects, achievements, and experience as a Computer Science undergraduate passionate about software development, open source, and innovation.
