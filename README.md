@@ -26,4 +26,3 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 ---
 
 Thanks for visiting! 🚀 Feel free to fork, star ⭐, or reach out for collaboration!
-```
