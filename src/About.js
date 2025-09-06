@@ -34,9 +34,9 @@ const About = () => {
             {/* Each paragraph animated separately */}
             {[
               "Hi! I'm Varsha Gubbala, a passionate Computer Science student who loves building practical and user-friendly digital experiences. I’m always excited to work on meaningful projects that make a difference.",
-              "I specialize in building dynamic interfaces with React.js and have experience with modern JavaScript (ES6+), HTML5, and CSS3. I'm also proficient in using frameworks like Tailwind CSS for rapid UI development and have a foundational understanding of server-side technologies like Node.js and databases like MongoDB.",
-              "I'm always eager to learn — whether it’s through coding, online courses, or collaborating with others. Outside the tech world, I love expressing my creativity through drawing and sketching.",
-            ].map((text, i) => (
+"I have a strong interest in problem-solving, software development, and exploring innovative ideas that bridge technology with everyday life.",
+"I'm always eager to learn — whether it’s through coding, online courses, or collaborating with others. Outside the tech world, I love expressing my creativity through drawing and sketching.",
+  ].map((text, i) => (
               <motion.p
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
